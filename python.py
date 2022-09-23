@@ -24,8 +24,8 @@ from bs4 import BeautifulSoup
 print("Helloooo")
 #link = "https://fr.tradingview.com/markets/cryptocurrencies/global-charts/"
 link ="https://www.wongnai.com/businesses?originalQ=sushi&mode=2&domain=1&page.number=1&cregion=8828&locale=en&categories=30&rerank=false&regions=1";
-html = requests.get(link).text
-
+#html = requests.get(link).text
+html = urllib.request.urlopen(link).read()
 """If you do not want to use requests then you can use the following code below 
    with urllib (the snippet above). It should not cause any issue."""
 soup = BeautifulSoup(html, "lxml")
