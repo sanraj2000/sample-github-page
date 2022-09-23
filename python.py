@@ -34,3 +34,15 @@ soup = BeautifulSoup(html, "lxml")
 #for title in soup.find_all("div", {"class": "tabTitle-qQlkPW5Y"}):
 for title in soup.find_all('div',class_='body'):
       print(title.text)
+  
+  
+url = "http://kite.com"
+url_contents = urllib.request.urlopen(url).read()
+
+soup = bs4.BeautifulSoup(url_contents, "html")
+div = soup.find("div", {"id": "home-template"})
+
+content = str(div)
+
+print(content[:50])  
+  
