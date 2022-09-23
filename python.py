@@ -4,6 +4,8 @@
 #div_bs4 = soup.find('div', id = "container")
 #print(div_bs4.string)
 
+
+import urllib
 #from selenium import webdriver
 #driver = webdriver.Chrome(/path/ToChromeWebDriver)
 url = "https://fr.tradingview.com/markets/cryptocurrencies/global-charts/"
