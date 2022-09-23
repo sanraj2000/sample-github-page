@@ -32,5 +32,5 @@ html = requests.get(link).text
 soup = BeautifulSoup(html, "lxml")
 #res = soup.findAll("article", {"class": "listingItem"})
 #for title in soup.find_all("div", {"class": "tabTitle-qQlkPW5Y"}):
-for title in soup.find_all('div',class_='tabTitle-qQlkPW5Y'):
+for title in soup.find_all('div',class_='body'):
       print(title.text)
