@@ -4,11 +4,11 @@
 #div_bs4 = soup.find('div', id = "container")
 #print(div_bs4.string)
 
-from selenium import webdriver
-driver = webdriver.Chrome(pathToChromeWebDriver)
+#from selenium import webdriver
+#driver = webdriver.Chrome(/path/ToChromeWebDriver)
 url = "https://fr.tradingview.com/markets/cryptocurrencies/global-charts/"
-driver.get(url)
-html = driver.page_source
+#driver.get(url)
+html = urllib.request.urlopen(url).read()
 
 soup = BeautifulSoup(html, 'html.parser')
 for title in soup.find_all("div", {"class": "tabTitle-qQlkPW5Y"}):
