@@ -45,7 +45,7 @@ url_contents = urllib.request.urlopen(url).read()
 soup = BeautifulSoup(url_contents, "html")
 div = soup.find("div", {"id": "home-template"})
 
-content = str(div)
+content = str(div.text)
 
 print(content[:50])  
   
