@@ -22,7 +22,7 @@
 
 import requests
 from bs4 import BeautifulSoup
-
+print("Helloooo")
 link = "https://fr.tradingview.com/markets/cryptocurrencies/global-charts/"
 
 html = requests.get(link).text
