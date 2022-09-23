@@ -51,7 +51,8 @@ content = str(div2.text)
 content2 = str(div3.text)
 
 
-print(con[:50])
+#print(con[:50])
+print(con)
 
 print("only the div class")
 print(content)
