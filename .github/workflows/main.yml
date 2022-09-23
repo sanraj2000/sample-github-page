@@ -29,14 +29,18 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+     
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.7.7' # install the python version needed
+          
+      - name: install python packages
         run: |
-          from bs4 import BeautifulSoup
-          markup = '''<html><body><div id="container">Div Content</div></body></html>'''
-          soup = BeautifulSoup(markup, 'html.parser')
-          div_bs4 = soup.find('div', id = "container")
-          print(div_bs4.string)
-         
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
           
+      - name: execute py script # run sj-gobierno.py to get the latest data
+        run: python python.py
           
+     
