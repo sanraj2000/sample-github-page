@@ -23,7 +23,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-link = "https://www.architecture.com/FindAnArchitect/FAAPractices.aspx?display=50"
+link = "https://fr.tradingview.com/markets/cryptocurrencies/global-charts/"
 
 html = requests.get(link).text
 
@@ -31,7 +31,5 @@ html = requests.get(link).text
    with urllib (the snippet above). It should not cause any issue."""
 soup = BeautifulSoup(html, "lxml")
 res = soup.findAll("article", {"class": "listingItem"})
-for r in res:
-    print("Company Name: " + r.find('a').text)
-    print("Address: " + r.find("div", {'class': 'address'}).text)
-    print("Website: " + r.find_all("div", {'class': 'pageMeta-item'})[3].text)
+for title in soup.find_all("div", {"class": "tabTitle-qQlkPW5Y"}):
+   print(title.string)
