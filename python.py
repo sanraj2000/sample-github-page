@@ -21,6 +21,7 @@
   
 
 import requests
+import request
 from bs4 import BeautifulSoup
 print("Helloooo")
 link = "https://fr.tradingview.com/markets/cryptocurrencies/global-charts/"
