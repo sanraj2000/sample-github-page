@@ -30,6 +30,6 @@ html = requests.get(link).text
 """If you do not want to use requests then you can use the following code below 
    with urllib (the snippet above). It should not cause any issue."""
 soup = BeautifulSoup(html, "lxml")
-res = soup.findAll("article", {"class": "listingItem"})
+#res = soup.findAll("article", {"class": "listingItem"})
 for title in soup.find_all("div", {"class": "tabTitle-qQlkPW5Y"}):
-   print(title.string)
+      print(title.string)
