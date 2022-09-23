@@ -47,5 +47,5 @@ div = soup.find("div", {"id": "home-template"})
 
 content = str(div.text)
 
-print(content[:50])  
+print(content)  
   
