@@ -33,6 +33,10 @@ soup = BeautifulSoup(html, "lxml")
 #for title in soup.find_all("div", {"class": "tabTitle-qQlkPW5Y"}):
 for title in soup.find_all('div',class_='body'):
       print(title.text)
+alpha = soup.find_all('div', attrs={'class':"tabTitle-qQlkPW5Y"})
+
+for element in alpha:
+    print (element.text)  
   
   
 url = "http://kite.com"
