@@ -19,7 +19,7 @@
 
      
   
-
+from six.moves import urllib
 import requests
 from bs4 import BeautifulSoup
 print("Helloooo")
@@ -37,7 +37,7 @@ for title in soup.find_all('div',class_='body'):
   
   
 url = "http://kite.com"
-url_contents = requests.urlopen(url).read()
+url_contents = urllib.request.urlopen(url).read()
 
 soup = bs4.BeautifulSoup(url_contents, "html")
 div = soup.find("div", {"id": "home-template"})
