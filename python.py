@@ -45,8 +45,11 @@ url_contents = urllib.request.urlopen(url).read()
 soup = BeautifulSoup(url_contents, "html")
 div = soup.find("div", {"id": "home-template"})
 div2 =soup.find("div",{"class": "homepage-new__hero__download"})
-
+div3= soup.find("div", {"class": "download-button__text-elements"})
 content = str(div2.text)
+content2 = str(div3.text)
 
-print(content)  
+print(content)
+print("sandy sandy sandy")
+print(content2)
   
