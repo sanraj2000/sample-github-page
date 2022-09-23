@@ -6,6 +6,7 @@
 
 
 import urllib
+import requests
 #from selenium import webdriver
 #driver = webdriver.Chrome(/path/ToChromeWebDriver)
 url = "https://fr.tradingview.com/markets/cryptocurrencies/global-charts/"
