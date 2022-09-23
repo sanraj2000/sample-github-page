@@ -44,8 +44,9 @@ url_contents = urllib.request.urlopen(url).read()
 
 soup = BeautifulSoup(url_contents, "html")
 div = soup.find("div", {"id": "home-template"})
+div2 =soup.find("div",{"class": "homepage-new__hero__download"})
 
-content = str(div.text)
+content = str(div2.text)
 
 print(content)  
   
