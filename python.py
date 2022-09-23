@@ -18,8 +18,7 @@
  #    print(title.string)
 
      
-  
-from six.moves import urllib
+import urllib
 import requests
 from bs4 import BeautifulSoup
 print("Helloooo")
