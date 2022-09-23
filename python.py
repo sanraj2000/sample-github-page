@@ -21,7 +21,6 @@
   
 
 import requests
-import request
 from bs4 import BeautifulSoup
 print("Helloooo")
 link = "https://fr.tradingview.com/markets/cryptocurrencies/global-charts/"
@@ -38,7 +37,7 @@ for title in soup.find_all('div',class_='body'):
   
   
 url = "http://kite.com"
-url_contents = request.urlopen(url).read()
+url_contents = requests.urlopen(url).read()
 
 soup = bs4.BeautifulSoup(url_contents, "html")
 div = soup.find("div", {"id": "home-template"})
