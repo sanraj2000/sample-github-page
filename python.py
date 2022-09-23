@@ -22,8 +22,8 @@ import urllib
 import requests
 from bs4 import BeautifulSoup
 print("Helloooo")
-link = "https://fr.tradingview.com/markets/cryptocurrencies/global-charts/"
-
+#link = "https://fr.tradingview.com/markets/cryptocurrencies/global-charts/"
+link ="https://www.wongnai.com/businesses?originalQ=sushi&mode=2&domain=1&page.number=1&cregion=8828&locale=en&categories=30&rerank=false&regions=1";
 html = requests.get(link).text
 
 """If you do not want to use requests then you can use the following code below 
@@ -31,9 +31,9 @@ html = requests.get(link).text
 soup = BeautifulSoup(html, "lxml")
 #res = soup.findAll("article", {"class": "listingItem"})
 #for title in soup.find_all("div", {"class": "tabTitle-qQlkPW5Y"}):
-for title in soup.find_all('div',class_='body'):
-      print(title.text)
-alpha = soup.find_all('div', attrs={'class':"tabTitle-qQlkPW5Y"})
+#for title in soup.find_all('div',class_='body'):
+ #     print(title.text)
+alpha = soup.find_all('div', attrs={'class':"sc-1d7kslo-11 cWzosZ"})
 
 for element in alpha:
     print (element.text)  
