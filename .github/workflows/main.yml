@@ -40,8 +40,11 @@ jobs:
         run: |
          grep -o  -P 'alt.{0,5}'  ./output/webscrap.txt  > ./output/final.txt
          grep -o -P 'Build \#.{0,50}' ./output/webscrap.txt  > ./output/finalbuild.txt
-         grep -o 'script">[^>]*</h1>' ./output/webscrap.txt  > ./output/finalbuild
-         perl -lane '{print $1 if m!(script.*?</h1>)!}' ./output/webscrap.txt
+         sed -n 's/.*Build \#, //p'    ./output/webscrap.txt  
+      
+      
+      #grep -o 'script">[^>]*</h1>' ./output/webscrap.txt  > ./output/finalbuild
+       #  perl -lane '{print $1 if m!(script.*?</h1>)!}' ./output/webscrap.txt
          
        
              
