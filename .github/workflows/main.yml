@@ -32,10 +32,6 @@ jobs:
      
       - name: GREP
         run:  grep -A 30 "<h1 class=\"build-caption page-headline\">" ./output/awsdevbvt.txt  > ./output/webscrap.txt
-        
-      - name: Image
-        run: grep -A 1 "<img class=\"icon-aborted icon-xlg\">" ./output/awsdevbvt.txt  > ./output/final.txt 
-
      
         
        
