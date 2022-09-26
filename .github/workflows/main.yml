@@ -40,7 +40,7 @@ jobs:
         run: |
          grep -o  -P 'alt.{0,5}'  ./output/webscrap.txt  > ./output/final.txt
          grep -o -P 'Build \#.{0,50}' ./output/webscrap.txt  > ./output/finalbuild.txt
-         grep -o -P 'Build \# \K\w+(?= h1/>)'  ./output/webscrap.txt  > ./output/finalbuild.txt
+         grep -o -P 'Build \# \K\w+(?= h1>)'  ./output/webscrap.txt  > ./output/finalbuild.txt
        
              
       - name: "Put back details"
