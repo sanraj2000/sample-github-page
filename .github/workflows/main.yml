@@ -37,7 +37,7 @@ jobs:
 
      
       - name: GREP2
-        run:  grep -P 'alt.{0,5}  ./output/webscrap.txt  > ./output/final.txt  
+        run:  grep -P 'alt.{0,5}'  ./output/webscrap.txt  > ./output/final.txt  
        
              
       - name: "Put back details"
