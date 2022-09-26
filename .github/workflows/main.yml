@@ -30,17 +30,22 @@ jobs:
         run: echo Hello, world!
 
      
-      - name: setup python
-        uses: actions/setup-python@v2
+      - name: GREP
+        run:  grep -A 30 "<h1 class=\"build-caption page-headline\">" ./output/awsdevbvt.txt  > ./output/webscrap.txt
+
+     
+        
+       
+             
+      - name: "Put back details"
+        if: always()
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          python-version: '3.7.7' # install the python version needed
-          
-      - name: install python packages
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          
-      - name: execute py script # run sj-gobierno.py to get the latest data
-        run: python sample.py
+          GITHUB_TOKEN: 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
+          branch: main
+          commit_message: "Automated Change"
+          push_options: '--force'
+          create_branch: true  
+ 
           
      
