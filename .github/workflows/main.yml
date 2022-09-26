@@ -37,7 +37,7 @@ jobs:
 
      
       - name: GREP2
-        run:  grep -Eo 'Build #(\s+\S+){10}' <<EOF ./output/webscrap.txt  > ./output/final.txt  
+        run:  grep -Eo 'alt(\s+\S+){10}' <<EOF ./output/webscrap.txt  > ./output/final.txt  
        
              
       - name: "Put back details"
