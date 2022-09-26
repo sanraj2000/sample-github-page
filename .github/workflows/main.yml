@@ -38,7 +38,8 @@ jobs:
      
       - name: GREP2
         run: |
-         grep -o  -P 'alt.{0,5}'  ./output/webscrap.txt  > ./output/final.txt 
+         grep -o  -P 'alt.{0,5}'  ./output/webscrap.txt  > ./output/final.txt
+         grep -o -P 'Build \#.{0,50}' ./output/webscrap.txt  > ./output/finalbuild.txt
      
        
              
